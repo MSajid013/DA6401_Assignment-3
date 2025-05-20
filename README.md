@@ -35,30 +35,32 @@ Dropout Regularization to prevent overfitting.
 Bidirectional Encoder for capturing both forward and backward context.
 
 # Best Hyperparameters
-- input_size = 30         # Number of unique Latin characters
-- output_size = 58        # Number of unique Urdu characters
-- embed_size = 64
-- hidden_size = 128
-- encoder_layers = 3
-- decoder_layers = 3
-- cell_type = 'lstm'
-- batch_size = 64
-- num_epochs = 10
-- drop_prob = 0.2
-- learning_rate = 0.001
+- input_vocab_size = 30         # Number of Latin script characters
+- output_vocab_size = 58        # Number of Urdu script characters
+- embedding_dim = 64           # Embedding dimension for both encoder and decoder
+- hidden_size = 128             # Hidden state size for RNN cells
+- encoder_layers = 3            # Number of layers in encoder RNN
+- decoder_layers = 3            # Number of layers in decoder RNN
+- cell_type = 'lstm'            # RNN cell type: 'rnn', 'gru', or 'lstm'
+- batch_size = 64               # Batch size during training
+- num_epochs = 10               # Total number of training epochs
+- dropout = 0.2                 # Dropout probability
+- learning_rate = 0.001         # Learning rate for optimizer
 - bidirectional = True
 
 # Best Hyperparameters (Attention Model)
-- input_size = 30         # Number of unique Latin characters
-- output_size = 58        # Number of unique Urdu characters
-- embed_size = 64
-- hidden_size = 128
-- encoder_layers = 1
-- decoder_layers = 1
-- cell_type = 'lstm'
-- batch_size = 64
-- num_epochs = 10
-- drop_prob = 0.3
-- learning_rate = 0.001
+- input_vocab_size = 30         # Number of Latin script characters
+- output_vocab_size = 58        # Number of Urdu script characters
+- embedding_dim = 64           # Embedding dimension for both encoder and decoder
+- hidden_size = 128             # Hidden state size for RNN cells
+- encoder_layers = 1            # Number of layers in encoder RNN
+- decoder_layers = 1            # Number of layers in decoder RNN
+- cell_type = 'lstm'            # RNN cell type: 'rnn', 'gru', or 'lstm'
+- batch_size = 64               # Batch size during training
+- num_epochs = 10               # Total number of training epochs
+- dropout = 0.3                 # Dropout probability
+- learning_rate = 0.001         # Learning rate for optimizer
 - bidirectional = True
 
+# WandB Report Link:
+https://wandb.ai/ma23m013-iit-madras/DA6401_Assignment-3/reports/DA6401-Assignment-3--VmlldzoxMjM5MDgzNg?accessToken=xhilhlf90j29ynzwnwy0jb29xf7y9vty1o1u1upl5rpfpsank0ncntti7feeozsj
